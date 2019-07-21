@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-code-war</title>
+</head>
+
+<body>
+    <script>
+        //a, e, i, o,
+        //     function getCount(str) {
+
+        //                 var vowelsCount = 0;
+
+        //                 const rr = str.toLowerCase().split('');
+        //                 rr.forEach((item)=>{
+        //                     if(item.includes("e")){
+        //                         vowelsCount ++; 
+        //                     } 
+        //                     if(item.includes("a")){
+        //                         vowelsCount ++; 
+        //                     } 
+        //                     if(item.includes("i")){
+        //                             vowelsCount ++;     
+        //                     }
+        //                     if(item.includes("o")){
+        //                             vowelsCount ++;     
+        //                     }
+        //                     if(item.includes("u")){
+        //                             vowelsCount ++;
+        //                     }
+        //                     console.log(vowelsCount);
+
+        //                     return vowelsCount;
+        //                     })
+
+
+        //     return vowelsCount;
+        // } 
+        function getCount(str) {
+            var vowelsCount = 0;
+            const arr = ["a", "e", "i", "o", "u"];
+            const word = str.toLowerCase().split('');
+            arr.forEach((sym) => {
+                word.filter(item => {
+                    return (
+                        item === sym ? vowelsCount++ : ''
+                    )
+                })
+            });
+            return vowelsCount;
+            let y = getCount("Abrac\ 213adabra");
+            console.log(y);
+    </script>
+</body>
+
+</html>
