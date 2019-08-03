@@ -10,23 +10,34 @@
 
 <body>
     <script>
-        var uniqueInOrder = function (iterable) {
-            let arr;
-            if (Array.isArray(iterable)) {
-                arr = iterable;
-            } else {
-                arr = iterable.split('');
-            }
-            let result = [];
-            for (let i = 0; i < arr.length; ++i) {
-                if (arr[i] == arr[i + 1]) continue
-                result.push(arr[i])
-            }
-            return result;
+        // var uniqueInOrder = function (iterable) {
+        //     let arr;
+        //     if (Array.isArray(iterable)) {
+        //         arr = iterable;
+        //     } else {
+        //         arr = iterable.split('');
+        //     }
+        //     let result = [];
+        //     for (let i = 0; i < arr.length; ++i) {
+        //         if (arr[i] == arr[i + 1]) continue
+        //         result.push(arr[i])
+        //     }
+        //     return result;
+        // }
+        // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+        // // console.log(uniqueInOrder('ABBCcAD'));
+        // // console.log(uniqueInOrder([1, 2, 2, 3, 3]));
+        //нечетное число 3
+        function iqTest(numbers){
+            numbers = numbers.split(" ").map(function(el){return parseInt(el)});
+  
+  var odd = numbers.filter(function(el){ return el % 2 === 1});
+  console.log(odd);
+  var even = numbers.filter(function(el){ return el % 2 === 0});
+  console.log(even)
+  return odd.length < even.length ? (numbers.indexOf(odd[0]) + 1) : (numbers.indexOf(even[0]) + 1);
         }
-        console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-        // console.log(uniqueInOrder('ABBCcAD'));
-        // console.log(uniqueInOrder([1, 2, 2, 3, 3]));
+        console.log(iqTest("3  7 2"));
     </script>
 </body>
 
