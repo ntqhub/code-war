@@ -64,8 +64,64 @@
 
             function removeChar(str) {
                 return str.slice(1, -1);
-                }
+            }
 
+
+            //return value minus 
+            function makeNegative(num) {
+                let numb = num;
+                if (num < 0) {
+                    numb = Math.abs(num);
+                }
+                numb = -(numb)
+                return numb;
+            }
+            console.log(makeNegative(0));
+
+            //still
+            function makeNegative(num) {
+                return -Math.abs(num);
+            }
+            //find index needle
+            function findNeedle(haystack) {
+                const inx = haystack.findIndex(item => {
+                    return (
+                        item == "needle")
+                })
+
+                return `found the needle at position ${inx}`;
+            }
+            //Вернуть в парядке как в примере , проверить на массив
+            var uniqueInOrder = function (iterable) {
+                let arr;
+                if (Array.isArray(iterable)) {
+                    arr = iterable;
+                } else {
+                    arr = iterable.split('');
+                }
+                let result = [];
+                for (let i = 0; i < arr.length; ++i) {
+                    if (arr[i] == arr[i + 1]) continue
+                    result.push(arr[i])
+                }
+                return result;
+            }
+            console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+            // console.log(uniqueInOrder('ABBCcAD'));
+            // console.log(uniqueInOrder([1, 2, 2, 3, 3]));
+            //еще решение
+            function uniqueInOrder(it) {
+                var result = []
+                var last
+                
+                for (var i = 0; i < it.length; i++) {
+                    if (it[i] !== last) {
+                    result.push(last = it[i])
+                    }
+                }
+                
+                return result
+                }
     </script>
 </body>
 
