@@ -27,17 +27,38 @@
         // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
         // // console.log(uniqueInOrder('ABBCcAD'));
         // // console.log(uniqueInOrder([1, 2, 2, 3, 3]));
+        
+        
         //нечетное число 3
-        function iqTest(numbers){
-            numbers = numbers.split(" ").map(function(el){return parseInt(el)});
+//         function iqTest(numbers){
+//             numbers = numbers.split(" ").map(function(el){return parseInt(el)});
   
-  var odd = numbers.filter(function(el){ return el % 2 === 1});
-  console.log(odd);
-  var even = numbers.filter(function(el){ return el % 2 === 0});
-  console.log(even)
-  return odd.length < even.length ? (numbers.indexOf(odd[0]) + 1) : (numbers.indexOf(even[0]) + 1);
-        }
-        console.log(iqTest("3  7 2"));
+//   var odd = numbers.filter(function(el){ return el % 2 === 1});
+//   console.log(odd);
+//   var even = numbers.filter(function(el){ return el % 2 === 0});
+//   console.log(even)
+//   return odd.length < even.length ? (numbers.indexOf(odd[0]) + 1) : (numbers.indexOf(even[0]) + 1);
+//         }
+//         console.log(iqTest("3  7 2"));
+
+//consecut
+// function longestConsec(strarr, k) {
+//         let longest = "";
+//         for(let i=0;k>0 && i<=strarr.length-k;i++){
+//             let tempArray = strarr.slice(i,i+k);
+//             let temp = tempArray.join("");
+//             if(temp.length > longest.length){
+//                 longest = temp;
+//             }
+//         }
+//         if(longest.length == 0 && k > longest.length && k <= 0)
+//         {
+//             return longest = "";
+//         }
+//         return longest;  
+// }
+    // console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2));
+
     </script>
 </body>
 
